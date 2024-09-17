@@ -12,6 +12,7 @@ import { CgMoreO } from "react-icons/cg";
 
 import FeedCard from '@/components/FeedCard';
 import React from 'react';
+import FeedCardv2 from '@/components/FeedCardv2';
 const inter = Inter({ subsets: ['latin'] })
 
 interface XsidebarButton {
@@ -73,8 +74,7 @@ export default function Home() {
           <FeedCard />
           <FeedCard />
           <FeedCard />
-          <FeedCard />
-          <FeedCard />
+          
         </div>
         <div className="col-span-4"></div>
       </div>
