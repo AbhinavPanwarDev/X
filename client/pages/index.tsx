@@ -64,11 +64,16 @@ export default function Home() {
             {sidebarMenuItems.map(item => <li className='flex justify-start items-center gap-3 mt-2 hover:bg-gray-700 rounded-full px-7 py-3 w-fit cursor-pointer transition-all' key={item.title}><span>{item.icon}</span><span>{item.title}</span></li>)}
             </ul>
             <div className='mt-5 px-6'>
-              <button className='bg-[#1d9bf0] rounded-full p-3 w-full'>Tweet</button>
+              <button className='bg-[#1d9bf0] rounded-full p-3 w-full'>Post</button>
             </div>
           </div>
         </div>
         <div className="col-span-5 border-r-[1px] border-l-[1px] border-slate-700">
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
           <FeedCard />
         </div>
         <div className="col-span-4"></div>
