@@ -15,6 +15,8 @@ import { CredentialResponse, GoogleLogin } from '@react-oauth/google'
 import FeedCard from '@/components/FeedCard';
 import React, { useCallback } from 'react';
 import FeedCardv2 from '@/components/FeedCardv2';
+import { BiImageAlt } from 'react-icons/bi';
+
 const inter = Inter({ subsets: ['latin'] })
 
 interface XsidebarButton {
@@ -57,8 +59,8 @@ const sidebarMenuItems: XsidebarButton[] = [
 export default function Home() {
 
   const handleLoginWithGoogle = useCallback((cred: CredentialResponse) => {
-    
-   }, [])
+
+  }, [])
 
   return (
     <div>
@@ -77,6 +79,32 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-5 border-r-[1px] border-l-[1px] border-slate-700">
+          <div>
+            <div className='border border-r-0 border-l-0 border-b-0 border-gray-600 p-5 hover:bg-slate-900 transition-all cursor-pointer'>
+              <div className='grid grid-cols-12 gap-3'>
+                <div className='col-span-1'>
+                  {/* {user?.profileImageURL && (
+                    <Image
+                    className='rounded-full'
+                    src={user?.profileImageURL}
+                    alt="user-image"
+                    height={50}
+                    width={50}
+                   />
+                  )} */}
+                </div>
+                <div className='col-span-11'>
+                  <textarea className='text-xl px-3 w-full bg-transparent border-b border-slate-600' placeholder="What's Happening?" rows={3}></textarea>
+                  <div className='mt-2 flex justify-between'>
+                    <BiImageAlt className="text-xl" />
+                    <button className='bg-violet-600 font-semibold text-sm py-1 px-4 rounded-full'>
+                      Tweet
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <FeedCard />
           <FeedCard />
           <FeedCard />
