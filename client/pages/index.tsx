@@ -58,6 +58,13 @@ const sidebarMenuItems: XsidebarButton[] = [
 
 export default function Home() {
 
+  const handleSelectImage =  useCallback(() => {        //ok
+    const input = document.createElement('input')
+    input.setAttribute('type', 'file')
+    input.setAttribute('accept', 'image/*')
+    input.click();
+  }, [])
+
   const handleLoginWithGoogle = useCallback((cred: CredentialResponse) => {
 
   }, [])
@@ -94,9 +101,9 @@ export default function Home() {
                   )} */}
                 </div>
                 <div className='col-span-11'>
-                  <textarea className='text-xl px-3 w-full bg-transparent border-b border-slate-600' placeholder="What's Happening?" rows={3}></textarea>
-                  <div className='mt-2 flex justify-between'>
-                    <BiImageAlt className="text-xl" />
+                  <textarea className='text-xl px-3 w-full bg-transparent border-b border-slate-600' placeholder="What's happening?!" rows={3}></textarea>
+                  <div className='mt-2 flex justify-between items-center'>
+                    <BiImageAlt onClick={handleSelectImage} className="text-xl" />
                     <button className='bg-violet-600 font-semibold text-sm py-1 px-4 rounded-full'>
                       Tweet
                     </button>
