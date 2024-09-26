@@ -4,7 +4,7 @@ import { expressMiddleware } from '@apollo/server/express4'
 import bodyParser from 'body-parser';
 import { prismaClient } from '../clients/db';
 import { User } from './user';
-
+import { Tweet } from './tweet';
 
 
 export async function initServer() {
@@ -31,7 +31,7 @@ export async function initServer() {
             Query: {
                 ...User.resolvers.queries,
             },
-           
+
         },
     });
 
